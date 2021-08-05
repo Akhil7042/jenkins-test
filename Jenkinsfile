@@ -26,6 +26,13 @@ pipeline {
 
                 // Run Maven on a Unix agent.
               //  bat  "mvn -Dmaven.test.failure.ignore=true clean package"
+                 script {
+                    if (params.env == 'PROD') {
+                        echo 'Inside prod environment'
+                    } else {
+                        echo 'Inside Dev environment'
+                    }
+
 
             }
 
