@@ -16,7 +16,7 @@ pipeline {
         stage('Build') {
             steps {
 		echo "The company name ${company}"
-		echo "ENV : ${env}"
+		echo "BUILD ENV : ${env}"
 		echo "BUILD_WITH DEBUG : ${DEBUG_BUILD}"
 
                 echo "************** Running ${env.BUILD_ID} on ${env.JENKINS_URL}***********"
