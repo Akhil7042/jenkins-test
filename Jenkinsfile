@@ -29,13 +29,15 @@ pipeline {
                  script {
                  
                     try{
+                    
+                    dir('src'){
                         
                     if (params.env == 'PROD') {
                         echo 'Inside prod environment'
                     } else {
                         echo 'Inside Dev environment'
                     }
-                      
+                      }
                     
                     }catch(error){
                        throw error
